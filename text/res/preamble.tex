@@ -1,0 +1,30 @@
+% Tables
+\usepackage{booktabs}
+\usepackage{tabu}
+\usepackage{makecell}
+\usepackage{multirow}
+
+% Sizing and placement
+\usepackage[section]{placeins} % makes section a floatbarrier
+\usepackage[rawfloats, font={sf, small}]{floatrow} % this makes the font in all float object sans-serif and small
+\usepackage[font={sf, small},labelfont={bf, small},labelsep=space,format=hang,justification=raggedright]{caption}
+\floatsetup[table]{capposition=top}
+\floatsetup[figure]{capposition=bottom}
+\renewcommand{\floatpagefraction}{.8} % specifies that figures that use more than 80% of the page get their own page
+\restylefloat{figure} % provides H placement option
+\captionsetup[figure]{format=hang,justification=raggedright}
+\captionsetup[table]{singlelinecheck=false}
+\usepackage{relsize,etoolbox}
+
+% no "orphans"
+\clubpenalty = 100000
+
+% no "widows"
+\widowpenalty = 100000
+\displaywidowpenalty = 100000
+
+% prevent footnoes from spreading across two pages
+\interfootnotelinepenalty=100000
+
+% Appendices
+\usepackage[toc,page]{appendix}

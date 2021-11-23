@@ -1,0 +1,46 @@
+--- 
+knit: (function(input, ...) {
+    bookdown::render_book(
+      'index.Rmd',
+      envir = globalenv()
+    )
+  })
+title: "Paper title"
+author: "Paper author"
+date: "`r Sys.Date()`"
+params:
+  input_file: false
+output:
+  bookdown::pdf_document2:
+    toc: no
+    keep_tex: no
+    includes:
+      in_header: text/res/preamble.tex
+site: bookdown::bookdown_site
+geometry:
+  - left=2.5cm
+  - right=2.5cm
+  - top=2.5cm
+  - bottom=3cm
+indent: true
+numbersections: false
+papersize: a4
+fontsize: 12pt
+linestretch: 1.5
+cite-method: citeproc # citeproc, natbib, or biblatex
+citeproc: true # use pandoc-citeproc for citation rendering
+# csl: # set a custom csl file here to change the citation style when using citeproc
+bibliography: text/res/library.bib
+# biblio-style: apalike # for use with natbib or bibtex
+link-citations: yes
+nocite: | # Place any citations that should appear in the bilbiography but are not cited in the text here in a list format
+abstract: |
+  Place your abstract here.
+---
+
+```{r, setup, include=FALSE}
+
+# This is a setup code chunk. It is recommended to load your necessary data et al here.
+
+```
+
